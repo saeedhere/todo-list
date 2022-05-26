@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  --animate-duration: 500ms;
+}
+
+*{
+  font-family:'JetBrains Mono';
+}
+
+body {
+  margin: 0;
+  font-family: 'JetBrains Mono', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f8f9fb;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family:'Manrope';
+}
+
+.modal {
+  background: rgb(75 75 75 / 50%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.task-box{
+  max-height: calc(100vh - 300px);
+  overflow:auto
+}
