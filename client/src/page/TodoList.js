@@ -26,7 +26,7 @@ export default function TodoList() {
   }
 
   async function getTodoList(){
-    let responseData = await fetch('http://localhost:4000/todolist',{
+    let responseData = await fetch('/todolist',{
       headers:{ 'x-access-token': localStorage.getItem('token')}
     })
     responseData = await responseData.json()
@@ -85,7 +85,7 @@ function AddTaskForm({updateList}){
         data[entry[0]] = entry[1]
     }
 
-    const responseData = await fetch('http://localhost:4000/todolist', {
+    const responseData = await fetch('/todolist', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {

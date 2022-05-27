@@ -17,7 +17,7 @@ export default function Login() {
         data[entry[0]] = entry[1]
     }
     
-    let response = await fetch('http://localhost:4000/auth/login', {
+    let response = await fetch('/auth/login', {
       method: 'POST',
       headers: { 'Content-Type' : 'application/json' },
       body: JSON.stringify(data)

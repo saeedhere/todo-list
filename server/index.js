@@ -1,6 +1,7 @@
 const express  = require('express')
 const mongoose = require('mongoose')
 const cors     = require('cors')
+const path     = require('path')
 
 
 const app = express()
@@ -17,6 +18,11 @@ const todoListRouter = require('./routes/todoListRouter')
 
 app.use('/auth', authRouter)
 app.use('/todolist', todoListRouter)
+
+
+app.get('*', (req, res) =>{
+  res.sendFile(path.join(__dirname, 'static/index.html'))
+})
 
 
 app.listen(4000, () => console.log('Server Started'))

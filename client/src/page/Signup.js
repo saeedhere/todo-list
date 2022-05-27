@@ -18,7 +18,7 @@ export default function SignUp() {
         data[entry[0]] = entry[1]
     }
     
-    let response = await fetch('http://localhost:4000/auth/register', {
+    let response = await fetch('/auth/register', {
       method: 'POST',
       headers: { 'Content-Type' : 'application/json' },
       body: JSON.stringify(data)
